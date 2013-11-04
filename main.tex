@@ -48,56 +48,140 @@ Tamino P.S.M. Hartmann\\
 }
 
 \maketitle
-\begin{abstract}
-The abstract should summarize the complete paper and give a specific overview of what is covered in the paper. Do not confuse the abstract with an introduction.
-\end{abstract}
 
 \section{Introduction}
-Please have a look at the ACM sample file and FAQs at \url{acm.org/sigs/publications/proceedings-templates} for formatting help, concerning figures, tables, and math. Examples of Table and Figure environments are included as comments below.
 
-\subsection{A Subsection}
+We propose a system for liquid transfer of applications between physical and virtual hardware devices.
+To facilitate this functionality, we will take a closer look at the applications, devices, and hardware components available to us.
 
-\subsubsection{A subsubsection}
-Usually three hierarchy levels are sufficient for papers. You should rethink your structure, if you need more levels. \cite{bowman:reasoning}
+\section{System Types}
 
-%\begin{table}
-%	\centering
-%	\caption{Frequency of Special Characters}
-%	\label{tab:table1}
-%	\begin{tabular}{|c|c|l|} \hline
-%	Non-English or Math&Frequency&Comments\\ \hline
-%	\O & 1 in 1,000& For Swedish names\\ \hline
-%	$\pi$ & 1 in 5& Common in math\\ \hline
-%	\$ & 4 in 5 & Used in business\\ \hline
-%	$\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
-%	\hline\end{tabular}
-%\end{table}
-%
-%\begin{table*} % use the table* version to create tables spanning both columns
-%	\centering
-%	\caption{Some Typical Commands}
-%	\label{tab:table2}
-%	\begin{tabular}{|c|c|l|} \hline
-%	Command&A Number&Comments\\ \hline
-%	\texttt{{\char'134}alignauthor} & 100& Author alignment\\ \hline
-%	\texttt{{\char'134}numberofauthors}& 200& Author enumeration\\ \hline
-%	\texttt{{\char'134}table}& 300 & For tables\\ \hline
-%	\texttt{{\char'134}table*}& 400& For wider tables\\ \hline\end{tabular}
-%\end{table*}
-%
-%\begin{figure}
-%	\centering
-%	\includegraphics[width=\columnwidth]{fly.pdf}
-%	\caption{A fly}
-%	\label{fig:fly}
-%\end{figure}
-%
-%\begin{displaymath}
-%\lim_{x\rightarrow\infty} \frac{f(x)}{g(x)} = L.
-%\end{displaymath}
+In the following we will take a look at the possible system, application, and human interaction possibilities.
+We will evaluate and categorize the different system to person combinations for their usability as a human-computer-interaction project.
 
-\bibliographystyle{abbrv}
-\bibliography{sources}
+Regarding a multi-user system, there are different entity-relationships to be considered, each with its own concomitant features.
+In the following, the entities described in the relationships are the intended endpoints or terminal devices of the connections.
+
+Among the most common relationships is the link between the user and the system, short \textbf{one-to-system}.
+This connection implies e.g. a user storing data, such as appointments in her/his calendar, to be accessible afterwards.
+
+A further relationship is represented by the link between two users, hence \textbf{one-to-one }relationship.
+This configuration is commonly used for transferring data between two users or alternatively two devices.
+Such a communication can provide a high level of privacy, provided each device represents one user, e.g. when using smartphones.
+
+The \textbf{one-to-many} configuration represents a scenario in which, starting from one terminal device, a broadcast is sent to a pre-defined compilation of devices.
+This phenomenon is omnipresent in respect of social networking, thus rendering this configuration extremely common - with all its concomitant privacy issues.
+
+The \textbf{system-to-one} link describes a relationship where the interaction is invoked by the system and provokes output on one terminal device.
+This can be implemented pre-setting a date and time, registering a certain change in the environment using sensors or triggering a notification message to be sent after finishing a computing task.
+In an extreme case, this configuration doesn’t require any interaction with the user, however the output may show a deficit in the matter of privacy, for instance when the user receives private information while not interacting with the device.
+This effect may even be enhanced when the information is sent to a more or less public display in a network of displays.
+
+The \textbf{system-to-many} relationship can be rated similar to the system-to-one configuration, with an even greater loss in privacy - since potentially confidential information might be received by multiple devices without the proper recipient on site.
+Possible applications involve reminders for group activities and clues about changes in the environment, such as emergency notifications.
+
+A \textbf{many-to-many} relationship ordinarily applies in network gaming or (video) conferencing. Although privacy issues may arise from such a configuration, it enables simultaneous interaction of multiple users.
+
+\section{General Interaction Aspects}
+
+The most basic interaction aspect we have to consider is whether interaction is active – meaning initiated by the user – or passive – meaning that the system reacts to stimuli apart from direct user input.
+This has profound consequences for how the system would work and what it can be used for.
+For example some tasks only work well with direct interaction, no matter the capabilities of the system, such as text input.
+
+Apart from active or passive interaction we have to consider whether the system will work via a WIMP interface or if it will use a more metaphorical physical interaction scheme.
+WIMP is the standard for computing and widely in use; no mental work is required when switching to the system if that is used.
+A physical representation however is more intuitive.
+However, no standards exist (meaning most systems that are based on that work differently) and the discrepancy between the representation and the real world will always be a limiting factor.
+
+Another aspect that needs to be considered is how and if we differentiate between multiple users per device.
+This aspect has to be considered for targeting output and for identifying input and is called proximal regions.
+For example if only one person is in a room we can use the complete room for input and output without differentiation.
+If multiple users are within a room we will possibly be required to differentiate to the best of our capabilities based on the input and output hardware capabilities.
+These capabilities are hardware dependent and therefore listed in Input / Output.
+Independent of that however this decision is mainly influenced by the task the system will fulfill (meaning is differentiation required or can it be ignored?).
+
+\subsection{Input – Interaction Spaces}
+
+From an interaction standpoint, we can classify the different input possibilities for their distance to the device that will receive the input.
+
+The first category is input directly on the device, for example with the now popular touch screen technology.
+With a capable device, this input method allows fast and direct feedback that is immediately apparent to the user.
+For software designed for this input type, natural mappings can be used to create a very natural interaction.
+This can however quickly break down for more complex tasks, as modern tablets and smartphones have shown – they are only easily useable for consumption tasks and not for tasks that require a more complex interaction flow.
+Of course using a touchscreen requires the user to stand directly by or hold the device.
+Generally, interacting with it in this manner represents a gulf of execution because the user has to break his focus away from the task he wanted to fulfill.
+Current technology also limits the possibilities of a device to differentiate between multiple users on a single screen, as the touch events offer no identification data.
+
+Remote input offers up more complex interaction schemes.
+These range from pointing devices to ambient sensors.
+With these, we can track users, either complete bodies or just hands, as required. Utilizing microphones, light barriers, or other environment sensors can also offer up further or more specialized information such as the simple presence of a person.
+These remote input mechanisms allow multiple users to interact with a device, via identifying them based on available criteria.
+Remote input allows the user and the device with which he interacts to be placed at different locations – input can be done within a room and still be registered by the device.
+This however requires a more complex coordination from a software point of view.
+Another aspect that must be considered is the differentiation of privacy and how to enforce it.
+
+Remote input can also be done outside of the room the receiving device is in.
+Such input is then completely location irrelevant.
+However enabling or even allowing feedback becomes a non-trivial task.
+Out of room remote input also decreases social contact with other humans, as controlling devices from further away takes away the need to physically be present for input.
+
+\subsection{Input Actions}
+
+To interact with a system a user can occupy many different input actions. But it is not always clear which input action is most suitable. In the following section some input actions are introduced and their advantages and disadvantages are outlined.
+On possible input action is to simply touch on a device (or the like). So you normally use your finger for this. The input can be direct (direct contact with the device) or indirect (for example navigate with a touchpad). The advantages of this approach are that a natural interaction is possible (it is normal for the user to interact like this), besides the user gets feedback directly (without any lag of time) and finally an absolute interaction (direct manipulation) is possible. Disadvantages of this input action are that you have to be by the device to interact with it (spatial issues) and that a multi user interaction is difficult to achieve. If there are more than one user, you need a possibility to identify the different users. Furthermore in this case you have to deal with privacy issues (for example in a conference room) because everybody can see the user’s actions on the device.
+Another possible input action is the so called Device Bump. In this case the interaction is direct. An advantage is that the user can realize a metaphoric transmission. Otherwise the interaction is unnatural for the user. The user also needs a device. As aforementioned the privacy of the user has to be considered because every person in the same room notices the user’s interactions. 
+Input via Pointer is also possible and the interaction can be direct or indirect. An absolute interaction is possible if you are interacting with a real ‘pointer’ (not a mouse and so on). Disadvantages are that the user needs a device (pointer, mouse or something else) and that you also have to face privacy issues because user users can see the pointed space.
+Besides the user can initiate input with his device. In this case it is an indirect input because the user can only initiate input if he makes the detour over his device. This implicates some advantages. Firstly this input scenario is private and there is no problem to identificate the user. Also the functionality is directly available. So the user can interact with the device immediate and always. Some disadvantages are that no multi users are supported and every user has to have a device. Also no absolute interaction is possible.
+A further input action is interaction via gestures which is also an indirect input action. Here natural interaction is possible and a lot of gestures can be implemented (for example for passwords). On the other hand the number of gestures is limited to not (cognitively) overcharge the user. Also in this case multi user actions are not possible. Privacy issues have to be considered, because every other person in the room notices the gestures.
+Another possible input action is the (indirect) interaction via ambient sensors (microphone, light barrier, temperature, floor, 3D sensoric and so on). Mostly this interaction for is passive. Privacy has to be considered.
+
+\subsection{Output Actions}
+
+Having looked at input regions and available actions, we now examine the output possibilities of such a HCI system. Output systems are a monitor, a projection, tactile feedback, a smart device like a smartphone or smartwatch, speakers and smart artifacts and printers. Monitors and projections allow simultaneos output to all people in a room, considering the monitor or projection is large enough or people are close enough. As such they are well suited in displaying public information. Displaying information which is only visible to single users, and thus private, is hardly possible. One advantage to the fixed monitor is the independant projection surface of a projector. It can be used to make any surface such as a conference table or any wall a display. However in both cases the display usually is stationary limited to the installation of the monitor or projector. For users interacting through touch with a monitor tactile feedback is possible. The same counts for smartphones and smartwatches. Tactile feedback usually is very discrete as the user and others are not interrupted. As individual users can be notified it can be seen as private feedback. Also this kind of feedback rarely is used and thus this output channel usually is free. Disadvantages of tactile feedback is the lack of differentiation that is possible. There is vibration with different patterns and changeable surface properties such as roughness when touching. Tactile feedback also is fleeting and its missing is possible when people are distracted or simply don’t touch the device. Smartphones and Smartwatches specifically can be used as output devices to give feedback everywhere. However not every user may have such a device. Also using them for output purposes only individual users can be targeted with feedback which is an advantage in terms of privacy. The exception to this are speakers which give auditive feedback. Auditive feedback is very dominant and thus hardly missed and reaches multiple users when loud enough. This disturbes or interrupts the user or people in his proximity however making it an issue for private information. Also similar to the tactile feedback, auditive feedback is fleeting and would have to be repeated if missed. In an office environment there usually are printers which can be used to output information. They again are public as paper or 3D-models can be seen by any person present. However this output is real and persistant for incorporation in the real world and multiple users can be reached with one device. On the other hand maintenance of such devices is expensive and required often. Also printed output can be easily missed when not looking at the printer and other people seeing it may be a privacy issue. The last output devices we examined are smart artifacts. A smart artifact is a smart device in an ubiquitous environment such as furniture at home but also light sources, doors and home robots. Smart artifacts can reach multiple users in their area and they allow a natural mapping of actions such as opening doors. They are integrated in the environment and thus non-intrusive in the daily work and living. Their public nature is an issue for private information output. Also there are not many commercial products available.
+
+\section{Networking}
+
+Networking plays a central part in many applications nowadays.
+In the following we will take a quick look at the various aspects that can and should be considered when developing a system that partly or completely relies on networking.
+
+The first to consider is the physical technology (specifically the electromagnetic spectrum) with which to enable the connection between different devices.
+Three technologies have been widely adopted: wireless LAN, bluetooth, and infrared.
+Wireless LAN, generally referred to as wifi, is the most ubiquitous technology.
+It is broadly interoperable and a multitude of supported devices exist.
+Due to its comprehensive use, a lot of research has been focused on it, allowing a very comprehensive understanding of its capabilities.
+However the technology has a few significant drawbacks.
+Wifi generally does not have an excellent range due to its spectrum allocation.
+Any project that wants to use wifi nowadays for special communications will always have to share the medium with normal devices – meaning that there are often competing communications that congest channels.
+Bluetooth is another relatively common technology, mostly for accessory functions between near devices.
+However it has even lower range than wifi and doesn’t offer as high data rates.
+Infrared communications is only useable for communications in a very limited manner.
+It requires a direct line of sight to initiate a connection and offers even worse data transfer rates than bluetooth.
+However it has a single significant advantage: interoperability with devices that aren’t as high-tech as those that utilize bluetooth or wifi, such as television remotes.
+
+Once a connection is physically possible, one has to consider how to structure the communication hierarchy.
+Principally two separate possibilities exist, although they can easily be combined to varying degrees.
+Most common is the strictly hierarchical structure in the form of a tree graph.
+This structure is defined by the fact that communications are always facilitated via a common higher-level node.
+This form is how the current internet is structured.
+The upsides are varied.
+It allows a more centralized and streamlined integration for capabilities – meaning that to support new capabilities, only a single higher node must be upgraded – the lower nodes that rely on the service will not interfere with other higher nodes as they are strictly separated.
+However this also poses a significant risk: if a higher node is disrupted, all connected lower nodes are equally affected.
+That means that this form has a low resistance to failure.
+Because communications between two low nodes has to pass up and back down the tree, communication paths can be unnecessarily long – such as when two devices in the same room send an email between each other.
+
+The alternative is a mesh structure, or a graph where the nodes are connected to multiple surrounding nodes independent of their perceived authority.
+This allows easy addition of new devices to the mesh of communications, even for nodes that offer central services.
+It also allows a decentralization of network technology as dedicated routers and servers can be distributed onto every connecting device.
+A mesh structure also has a high fault tolerance towards disrupted routes: if nodes are disrupted, communications can easily be rerouted via alternative routes.
+However mesh networks come with some drawbacks that have proven to be non-trivial to solve.
+Negotiating dynamic communication links has proven to be difficult to implement correctly, and is often linked with a drastic decrease in available data bandwidth.
+
+Something that can also be considered when thinking with networks is whether we want to transfer only data via the network or if we also want to transfer running applications.
+Combinations of the two are also possible.
+Currently however the internet is only used to transfer data – programs are transferred but as data.
+
+\section{Glossary}
+
 
 % use this to make sure that columns are balanced on the last page.
 \balancecolumns
