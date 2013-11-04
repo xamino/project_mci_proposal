@@ -1,0 +1,104 @@
+\documentclass{acm_proc_article-sp}
+
+% UTF8 encoding and scalable fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+% Change to your title
+\title{MCI Proposal – Display Network}
+
+% Change to your personal details
+\numberofauthors{4}
+\author{
+\alignauthor
+Andreas Köll\\
+       \affaddr{Institute of Media Informatics}\\
+       \affaddr{Ulm University}\\
+       \affaddr{Ulm, Germany}\\
+       \email{andreas.koell@uni-ulm.de}
+\alignauthor
+Laura Irlinger\\
+       \affaddr{Institute of Media Informatics}\\
+       \affaddr{Ulm University}\\
+       \affaddr{Ulm, Germany}\\
+       \email{laura.irlinger@uni-ulm.de}
+\alignauthor
+Patryk Boczon\\
+       \affaddr{Institute of Media Informatics}\\
+       \affaddr{Ulm University}\\
+       \affaddr{Ulm, Germany}\\
+       \email{patryk.boczon@uni-ulm.de}
+\alignauthor
+Tamino P.S.M. Hartmann\\
+       \affaddr{Institute of Media Informatics}\\
+       \affaddr{Ulm University}\\
+       \affaddr{Ulm, Germany}\\
+       \email{tamino.hartmann@uni-ulm.de}
+}
+
+\maketitle
+\begin{abstract}
+The abstract should summarize the complete paper and give a specific overview of what is covered in the paper. Do not confuse the abstract with an introduction.
+\end{abstract}
+
+\section{Introduction}
+Please have a look at the ACM sample file and FAQs at \url{acm.org/sigs/publications/proceedings-templates} for formatting help, concerning figures, tables, and math. Examples of Table and Figure environments are included as comments below.
+
+\subsection{A Subsection}
+
+\subsubsection{A subsubsection}
+Usually three hierarchy levels are sufficient for papers. You should rethink your structure, if you need more levels. \cite{bowman:reasoning}
+
+%\begin{table}
+%	\centering
+%	\caption{Frequency of Special Characters}
+%	\label{tab:table1}
+%	\begin{tabular}{|c|c|l|} \hline
+%	Non-English or Math&Frequency&Comments\\ \hline
+%	\O & 1 in 1,000& For Swedish names\\ \hline
+%	$\pi$ & 1 in 5& Common in math\\ \hline
+%	\$ & 4 in 5 & Used in business\\ \hline
+%	$\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
+%	\hline\end{tabular}
+%\end{table}
+%
+%\begin{table*} % use the table* version to create tables spanning both columns
+%	\centering
+%	\caption{Some Typical Commands}
+%	\label{tab:table2}
+%	\begin{tabular}{|c|c|l|} \hline
+%	Command&A Number&Comments\\ \hline
+%	\texttt{{\char'134}alignauthor} & 100& Author alignment\\ \hline
+%	\texttt{{\char'134}numberofauthors}& 200& Author enumeration\\ \hline
+%	\texttt{{\char'134}table}& 300 & For tables\\ \hline
+%	\texttt{{\char'134}table*}& 400& For wider tables\\ \hline\end{tabular}
+%\end{table*}
+%
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=\columnwidth]{fly.pdf}
+%	\caption{A fly}
+%	\label{fig:fly}
+%\end{figure}
+%
+%\begin{displaymath}
+%\lim_{x\rightarrow\infty} \frac{f(x)}{g(x)} = L.
+%\end{displaymath}
+
+\bibliographystyle{abbrv}
+\bibliography{sources}
+
+% use this to make sure that columns are balanced on the last page.
+\balancecolumns
+
+\end{document}
