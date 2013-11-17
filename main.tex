@@ -228,6 +228,8 @@ However there are not many commercial products available.
 Networking plays a central part in many applications nowadays.
 In the following we will take a quick look at the various aspects that can and should be considered when developing a system that partly or completely relies on networking.
 
+\subsection{Wireless Connections}
+
 The first to consider is the physical technology (specifically the electromagnetic spectrum) with which to enable the connection between different devices.
 Three technologies have been widely adopted: wireless LAN, bluetooth, and infrared.
 Wireless LAN, generally referred to as wifi, is the most ubiquitous technology.
@@ -241,6 +243,8 @@ However it has even lower range than wifi and doesn’t offer as high data rates
 Infrared communications is only useable for communications in a very limited manner.
 It requires a direct line of sight to initiate a connection and offers even worse data transfer rates than bluetooth.
 However it has a single significant advantage: interoperability with devices that aren’t as high-tech as those that utilize bluetooth or wifi, such as television remotes.
+
+\subsection{Communication Hierarchy}
 
 Once a connection is physically possible, one has to consider how to structure the communication hierarchy.
 Principally two separate possibilities exist, although they can easily be combined to varying degrees.
@@ -259,6 +263,8 @@ It also allows a decentralization of network technology as dedicated routers and
 A mesh structure also has a high fault tolerance towards disrupted routes: if nodes are disrupted, communications can easily be rerouted via alternative routes.
 However mesh networks come with some drawbacks that have proven to be non-trivial to solve.
 Negotiating dynamic communication links has proven to be difficult to implement correctly, and is often linked with a drastic decrease in available data bandwidth.
+
+\subsection{Transferring Data or Programs}
 
 Something that can also be considered when thinking with networks is whether we want to transfer only data via the network or if we also want to transfer running applications.
 Combinations of the two are also possible.
