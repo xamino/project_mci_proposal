@@ -1,0 +1,44 @@
+Networking plays a central part in many applications nowadays.
+In the following we will take a quick look at the various aspects that can and should be considered when developing a system that partly or completely relies on networking.
+
+\subsection{Wireless Connections}
+
+The first to consider is the physical technology (specifically the electromagnetic spectrum) with which to enable the connection between different devices.
+Three technologies have been widely adopted: wireless LAN, bluetooth, and infrared.
+Wireless LAN, generally referred to as wifi, is the most ubiquitous technology.
+It is broadly interoperable and a multitude of supported devices exist.
+Due to its comprehensive use, a lot of research has been focused on it, allowing a very comprehensive understanding of its capabilities.
+However the technology has a few significant drawbacks.
+Wifi generally does not have an excellent range due to its spectrum allocation.
+Any project that wants to use wifi nowadays for special communications will always have to share the medium with normal devices – meaning that there are often competing communications that congest channels.
+Bluetooth is another relatively common technology, mostly for accessory functions between near devices.
+However it has even lower range than wifi and doesn’t offer as high data rates.
+Infrared communications is only useable for communications in a very limited manner.
+It requires a direct line of sight to initiate a connection and offers even worse data transfer rates than bluetooth.
+However it has a single significant advantage: interoperability with devices that aren’t as high-tech as those that utilize bluetooth or wifi, such as television remotes.
+
+\subsection{Communication Hierarchy}
+
+Once a connection is physically possible, one has to consider how to structure the communication hierarchy.
+Principally two separate possibilities exist, although they can easily be combined to varying degrees.
+Most common is the strictly hierarchical structure in the form of a tree graph.
+This structure is defined by the fact that communications are always facilitated via a common higher-level node.
+This form is how the current internet is structured.
+The upsides are varied.
+It allows a more centralized and streamlined integration for capabilities – meaning that to support new capabilities, only a single higher node must be upgraded – the lower nodes that rely on the service will not interfere with other higher nodes as they are strictly separated.
+However this also poses a significant risk: if a higher node is disrupted, all connected lower nodes are equally affected.
+That means that this form has a low resistance to failure.
+Because communications between two low nodes has to pass up and back down the tree, communication paths can be unnecessarily long – such as when two devices in the same room send an email between each other.
+
+The alternative is a mesh structure, or a graph where the nodes are connected to multiple surrounding nodes independent of their perceived authority.
+This allows easy addition of new devices to the mesh of communications, even for nodes that offer central services.
+It also allows a decentralization of network technology as dedicated routers and servers can be distributed onto every connecting device.
+A mesh structure also has a high fault tolerance towards disrupted routes: if nodes are disrupted, communications can easily be rerouted via alternative routes.
+However mesh networks come with some drawbacks that have proven to be non-trivial to solve.
+Negotiating dynamic communication links has proven to be difficult to implement correctly, and is often linked with a drastic decrease in available data bandwidth.
+
+\subsection{Transferring Data or Programs}
+
+Something that can also be considered when thinking with networks is whether we want to transfer only data via the network or if we also want to transfer running applications.
+Combinations of the two are also possible.
+Currently however the internet is only used to transfer data – programs are transferred but as data.
