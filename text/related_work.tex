@@ -24,19 +24,63 @@ The owner can read messages on the display itself, through a web interface or em
 An extension of visitors’ interaction with office displays is introduced by Cheverst et al. in \cite{cheverst2005exploring}, describing the usage of Bluetooth as an in- as well as output channel for visitors.
 Additionally to leaving a message, visitors can download certain data from the display owner.
 With the limited range of Bluetooth, the visitor has to approach the display to a few meters, which might be argued to be an inconvenience since data can be obtain using the internet, as well.
-However, according to \cite{cheverst2005exploring}, owners of data are more willingly to share (more private) data with visitors who have made the journey to their office.
+However, according to \cite{cheverst2005exploring}, owners of data are more willing to share (more private) data with visitors who have made the journey to their office.
 
-gia input
+\subsection{Input}
+Nacenta et al. \cite{a18-nacenta} introduced a multi-user system called LunchTable.
+Often people in groups check information on their mobile devices during conversations (for example during lunch). But for sharing information in groups mobile devices are less suitable: displays are simply too small.
+Large displays are easily shared by multiple users. So interaction in groups shall be simplified by a multi-user multi-display system: the LunchTable.
+The prototype uses a vertical display on the wall and a multi-touch display embedded within a regular lunch table.
+The information on the display can be controlled via the multi-touch display.
+The users can manipulate the wall display space by interacting with the horizontal surface window manager (LunchTable).
+Windows, also several simultaneously, can be manipulated by dragging their thumbnail. Moving application tiles into the regions of the window manager results in opening them on the display.
+For a simple interaction with the display there are virtual input devices on the lunch table (trackpad and keyboard).
+They can be opened with a trackpad icon and are connected to the thumbnail of the application.
+
+Boring et al. \cite{p161-boring} used the mobile phone as an input device for large public displays.
+They introduced three different interaction techniques: Scroll, Tilt and Move. With that the user can continuously control a pointer located on a remote display.
+To move the pointer on the large display a user can press the joystick on the phone in the desired direction (Scrolling).
+A user can accelerate the pointer by tilting the phone in the favored direction (Tilting).
+Lastly the mobile phone can be used like an interactive laser-pointer (Moving).
+Bidirectional interaction (input and output together) is possible using these techniques.
+A study showed Move and Tilt to be faster but more error prone techniques for selection tasks compared to Scroll.
+
+According to Baldauf et al. \cite{a4-baldauf} a camera-based control of large markerless displays through smartphones is a novel interaction technique.
+To enable this for a large network of screens they implemented a prototype framework.
+Hence the smartphone has to be able to register itself at one display (for example with a wireless connection).
+So input commands can be communicated.
+Afterwards the display and the smartphone periodically exchange image information.
+Such the relation between the display and the mobile phone can be defined and so touch interactions on the mobile phone can be executed.
+
+Obrenovic and Starcevic \cite{obrenovic_modeling_2004} observed modeling input and output modalities using UML2.
+According to them input modalities can be categorized as streaming-based and event-based.
+Event-based input modalities are for example input via a keyboard or mouse, streaming-based input is for example input from sensors (microphone etc.).
 
 \subsection{Output}
-Obrenovic and Starcevic \cite{obrenovic_modeling_2004} take a look at modeling input and output modalities using UML2. They differentiate between two general types of output. Static and dynamic output. Static output is for example a picture, dynamic output a video. Some forms of dynamic output therefore consist of animated static output. Another topic they discuss is the response time of systems. There is the socalled perceptual processing time (< 0.1sec) which appears to a person instantaneous and mutliple such events as continous. There is the immediate response time (~1sec) which is the minimum time a person requires to react to a new situation and there is the unit task time (~10sec) which is the scale for the simplest tasks the person wants to perform.
+Obrenovic and Starcevic \cite{obrenovic_modeling_2004} take a look at modeling input and output modalities using UML2.
+They differentiate between two general types of output. Static and dynamic output.
+Static output is for example a picture, dynamic output a video.
+Some forms of dynamic output therefore consist of animated static output.
+Another topic they discuss is the response time of systems.
+There is the socalled perceptual processing time (< 0.1sec) which appears to a person instantaneous and mutliple such events as continous.
+There is the immediate response time (~1sec) which is the minimum time a person requires to react to a new situation and there is the unit task time (~10sec) which is the scale for the simplest tasks the person wants to perform.
 
 
-Streits et al \cite{streitz_ambient_2003} show a public display called Hello.Wall to show information about people in it’s proximity. They differentiate between Interaction, Notification and Ambient Space which allow different interaction with the display. This information is also used to be transmitted to a remote indentical display and thus enhancing people in a remote place discretly about knowledge of the other location. This knowledge includes the general mood obtained from mobile devices (View.Port) associated with each person and can be used to see if there is the will for a video conference. The mobile device also functions as private output when within interaction zone of the display. Private information is otherwise coded in a abstract symbol on the display itself notifying the user associated with it about its existence.
+Streits et al \cite{streitz_ambient_2003} show a public display called Hello.
+Wall to show information about people in it’s proximity.
+They differentiate between Interaction, Notification and Ambient Space which allow different interaction with the display.
+This information is also used to be transmitted to a remote indentical display and thus enhancing people in a remote place discretly about knowledge of the other location.
+This knowledge includes the general mood obtained from mobile devices (View.Port) associated with each person and can be used to see if there is the will for a video conference.
+The mobile device also functions as private output when within interaction zone of the display.
+Private information is otherwise coded in a abstract symbol on the display itself notifying the user associated with it about its existence.
 
 
 Ballendat et al \cite{ballendat_proxemic_2010} take the concept of proxemics further and develop a proxemic media player which reacts to the angle, movement and view of one or multiple persons in front of a ambient display.
-So looking away from the monitor pauses the movie, moving towards the display shows more information the closer the person is to the display. E.g. from far away an overview of running movies is shown. From closer up also information like its title is shown. Sitting on the couch toggles the movie fullscreen. A second user approaching the display is shown the title when away and a detailed information in a split screen view when close to the display. The second view continues playing the movie.
+So looking away from the monitor pauses the movie, moving towards the display shows more information the closer the person is to the display. E.g. from far away an overview of running movies is shown.
+From closer up also information like its title is shown.
+Sitting on the couch toggles the movie fullscreen.
+A second user approaching the display is shown the title when away and a detailed information in a split screen view when close to the display.
+The second view continues playing the movie.
 
 
 
