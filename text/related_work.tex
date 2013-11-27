@@ -1,20 +1,15 @@
 \section{Related Work}
 % Mit bold, jeder einen Absatz
-The following section contains an overview of related work. First research about system types is collected. Afterwards an overview about possible input interactions is given, followed by related work about output. Lastly some papers about networking are granted.
+The following section contains an overview of related work, categorized in the possible system types.
+%The following section contains an overview of related work. First research about system types is collected. Afterwards an overview about possible input interactions is given, followed by related work about output. Lastly some papers about networking are granted.
 
-\subsection{System Types}
-Service modes/System types and applications
-A wide range of various system types (/service modes) occurs in the field of pervasive displaying.
+\subsection{One-To-One}
 
-Memarovic et al. \cite{memarovic_places} describe potential \textbf{public display} applications to foster community interactions.
-This work considers applications for a public display scenario and proposed a framework for implementation purposes.
-Potential applications comprise e.g. transmitting text or (Flickr) images to a public display to be shown, matching a one-to-one or one-to-many system type.
-In addition, social media content can be displayed such as twitter feeds or facebook sites.
-Aside from that, content can be service provided and does not have to originate from users.
-This includes bus schedules, advertisement or other location based information such as the weather forecasts or upcoming events.
-Such a mode can be described as a system-to-one or system-to-many system type with the output being initiated by the system itself.
-Among the possibilities for producing the to-be-displayed content are the publishment of information via smartphone, email, social media or a simply by dropping the content in a network folder.
+\subsection{One-To-Many}
 
+\subsection{One-To-System}
+
+\paragraph{Exploring the utility of remote messaging and situated office door displays}
 Cheverst et al. proposed \textbf{remote messaging and situated office door displays} \cite{cheverst2003exploring}.
 Dating back to a time when SMS was extremely prominent, this work investigates the utility of sending messages not to a particular cellphone owned by a person but to one displays situated at particular locations.
 One purpose of such an implementation was to explore whether a digital alternative is an enhancement to traditional post-it notes.
@@ -26,6 +21,42 @@ An extension of visitors’ interaction with office displays is introduced by Ch
 Additionally to leaving a message, visitors can download certain data from the display owner.
 With the limited range of Bluetooth, the visitor has to approach the display to a few meters, which might be argued to be an inconvenience since data can be obtain using the internet, as well.
 However, according to \cite{cheverst2005exploring}, owners of data are more willing to share (more private) data with visitors who have made the journey to their office.
+
+\subsection{System-To-One}
+
+\subsection{Many-To-Many}
+
+\paragraph{The Interacting Places Framework: Conceptualizing Public Display Applications That Promote Community Interaction and Place Awareness}
+Memarovic et al. \cite{memarovic_places} describe potential \textbf{public display} applications to foster community interactions.
+This work considers applications for a public display scenario and proposed a framework for implementation purposes.
+Potential applications comprise e.g. transmitting text or (Flickr) images to a public display to be shown.
+In addition, social media content can be displayed such as twitter feeds or facebook sites.
+Aside from that, content can be service provided and does not have to originate from users.
+This includes bus schedules, advertisement or other location based information such as the weather forecasts or upcoming events.
+Such a mode can be described as a system-to-one or system-to-many system type with the output being initiated by the system itself.
+Among the possibilities for producing the to-be-displayed content are the publishment of information via smartphone, email, social media or a simply by dropping the content in a network folder.
+
+\paragraph{Screen Codes: Visual Hyperlinks for Displays}
+In order to distinguish multiple interactions on public displays, Collomosse and Kindberg \cite{Collomosse_ScreenCodes} proposed C-Blink as visual-based interaction channel. The screen of the user’s smartphone emits a sequence of colors which represents coded information. The sequence is seized by a camera mounted on the public display, thus encoding the information.
+
+\paragraph{Yarely: a software player for open pervasive display networks}
+Yarely is a software player designed by Clinch et al. \cite{Clinch_Yarely} which is based on pervasive display networks. Whereas conventional media players are controlled by one authority, Yarely is supposed to perceive content as well as a play out schedule from several sources simultaneously. The actual output of content will be evaluated by the player itself.
+One design goal of Yearly was extensibility. The integration of new components, e.g. adding environmental sensing for input purposes or rendering of the displayed content, is intended to cause minimal changes to the core player.
+
+
+\subsection{System-To-Many}
+
+\paragraph{Crossmodal Attention in Public-Private Displays}
+Olivier et al. \cite{Olivier_Crossmodal} propose CrossBoard, where the user’s smartphone is synchronized with the public display.
+In order to distinguish information that is relevant for the user, the display highlights pieces of information periodically while the user’s smartphone vibrates as long as the relevant information is highlighted.
+
+\paragraph{Interactive Public Ambient Displays: Transitioning from Implicit to Explicit, Public to Personal, Interaction with Multiple Users}
+Vogel et al.\cite{Vogel_InteractivePublicAmbient} exploit body tracking to determine which information should be displayed on which section of big public screens. Position (proximity to the screen) as well as posture of the user indicate the size and position of the relevant section of the display while RFID tags or face recognition is applied for identification and selection of information.
+
+\paragraph{Visual Highlighting on Public Displays}
+Ostkamp et al. \cite{Ostkamp_VisualHighlighting} introduce AR-Multipleye as an AR-based approach for visual highlighting using smartphones. A QR tag is situated on the public screen and provides information about different visual highlightings. A hint for the relevant information may e.g. be a transparent overlay on the piece of information when seen through the smartphone’s camera.
+
+
 
 \subsection{Input}
 Nacenta et al. \cite{a18-nacenta} introduced a multi-user system called LunchTable.
