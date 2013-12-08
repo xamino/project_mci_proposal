@@ -6,8 +6,27 @@ As most of these concepts are based on the location sharing, we propose to imple
 
 \subsection{Location Sharing}
 \label{location_sharing}
+Location Sharing is the base service required for further development of the MIND system.
+The idea is that people in an enhanced office environment can be tracked using public displays placed the offices.
+So looking at a public display one can see the current location of every other office member.
+A sketch of such a display is shown in figure ... .
+Office rooms are drawn as an floor plan and colored similarly to their assigned office members.
+The members themselves are drawn in unique colors extended with a photo or sketch to make them easily identifiable.
 
-todo
+The tracking is done using light sensors at doors reacting to people entering and leaving an office.
+Then using wifi fingerprinting of the member's mobile device his location is determined.
+
+Since the public display is placed within an office room, repeating changes on the screen my interrupt members working.
+As consequence the display is dimmed when none is looking at it and changes are made using very smooth transitions.
+Looking at the screen, the display lights up and its update frequency is increased.
+This behavior is achieved using simple head tracking via camera and computer vision.
+
+
+
+As extension we propose to add a public display in front of the office to allow external persons such as students see which office member is currently available.
+The setting if a student may see a persons availability is configured by each member individually.
+
+
 
 \subsection{Video Sharing}
 
