@@ -31,9 +31,11 @@ This would allow a user to take data with him when going to a colleagues' office
 Apart from making the data available to the system, no further care would need to be taken to keep data readily available.
 The second mode would allow data to be shared by sending it to a certain location, for example a meeting room.
 This would make the data publicly available, primarily for that location.
-Once that shared data were accessed from the location, its ownership would transfer away from its originating owner.
+Once that shared data is accessed from the location, its ownership would transfer away from its originating owner to a public ownership based on the location.
 
-Due to the high number of personal devices that are in use in the target environment, a client program will be required for easy access to data that a user wants to share.
+Figure \ref{data_share_sequence} shows some concepts for how the system would handle the data via the proposed modes.
+Private sharing of data is also allowed by pinning data to another person.
+This person then has access to the data based on their location, although ownership only transfers at a specific event that will have to be specified based on user preference and usage for download.
 
 \begin{figure}
 	\centering
@@ -42,5 +44,9 @@ Due to the high number of personal devices that are in use in the target environ
 	\label{data_share_sequence}
 \end{figure}
 
-test test
-Figure \ref{data_share_sequence} shows some cool stuff, test test.
+As no data can be generated in the first iterations of the system (although such capabilities might well be added), a way to transfer data to and from the system will be required.
+Such a way also makes sense from a user point of view, as the system is to be used alongside a broad range of private computers of the users.
+To solve this data transfer gap, we propose a client program for a variety of devices that allows data control.
+Pinning data to the user's own location (as in his private space) can be done by simply allowing the user to drag\&drop a file onto the client application, which will handle any conversion and transferring mechanism.
+Similarly, retrieving data from a location or private area can be done by selecting the data via the client.
+Having a client for not only desktop computers but also for smartphones would enable a broader and more comprehensive usage of the proposed service system.
