@@ -9,9 +9,16 @@ As most of these concepts are based on the location sharing, we propose to imple
 Location Sharing is the base service required for further development of the MIND system.
 The idea is that people in an enhanced office environment can be tracked using public displays placed the offices.
 So looking at a public display one can see the current location of every other office member.
-A sketch of such a display is shown in figure ... .
+A sketch of such a display is shown in figure \ref{fig:location_sharing}.
 Office rooms are drawn as an floor plan and colored similarly to their assigned office members.
 The members themselves are drawn in unique colors extended with a photo or sketch to make them easily identifiable.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{img/location_sharing}
+	\caption[Location Sharing]{Location Sharing}
+	\label{fig:location_sharing}
+\end{figure}
 
 The tracking is done using light sensors at doors reacting to people entering and leaving an office.
 Then using wifi fingerprinting of the member's mobile device his location is determined.
@@ -21,10 +28,20 @@ As consequence the display is dimmed when none is looking at it and changes are 
 Looking at the screen, the display lights up and its update frequency is increased.
 This behavior is achieved using simple head tracking via camera and computer vision.
 
+Concerning privacy not every member wants to be tracked all the time.
+Also it must be possible to tell others not to be disturbed.
+Therefore every member owns a configurable personal profile controlling his privacy wishes.
+It allows setting different visibility stages such as hiding oneself from the system,
+Showing one's general availability and his location.
+The later two modes allow further adjustments such as setting 'Do not disturb'.
+In any mode it is also possible to set messages such as 'currently in mensa' to notify other members of ones location when not in office.
+Also the door can be used as input to control these modes.
+An open door could represent availability and a closed unavailability or that the member is busy.
 
+A web based administration interface is used to manage member-office associations.
 
 As extension we propose to add a public display in front of the office to allow external persons such as students see which office member is currently available.
-The setting if a student may see a persons availability is configured by each member individually.
+The setting if a student may see a persons availability is configured by each member individually in his privacy profile.
 
 
 
