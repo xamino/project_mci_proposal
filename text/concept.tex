@@ -47,7 +47,18 @@ The setting if a student may see a persons availability is configured by each me
 
 \subsection{Video Sharing}
 
-todo
+The idea behind Video Streaming is that a person can call a room 
+(for example the conference room) or a single person (the person’s office or a room where the person is currently in).
+A Location Service can provide the current location of the person.
+Assumed person A wants to start a video conference with person B. person A only sees a pixelated picture of person B. Person B sees Person A clearly. Now person B can accept the request with a gesture or an touch interaction (for example wipe to clear the view) or reject the request (see figure \ref{video_sharing_pic}).
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{img/videochat.png}
+	\caption[Video Sharing]{Video Sharing - wipe to clear the view}
+	\label{video_sharing_pic}
+\end{figure}
+To keep interruptibility small the called person only sees a pixelated picture or a frozen window (no movements). Besides, a person can configure intensity of the display’s brightness and other settings. 
+To protect privacy the user can change his status from available to limited available (for example available to certain people or available in certain time slots). He also can configure that he doesn't want to be interrupted by whatever is going on. So the interruptibility is kept small too. To put this approach into practice we work with Raspberry Pis and an open source Video Streaming. It has to be checked whether the performance of the Raspberry Pis is suffice.
 
 \subsection{Screencast Sharing}
 
@@ -64,7 +75,7 @@ Additionally, combining screen sharing with video-chat is a possibility.
 	\centering
 	\includegraphics[width=\linewidth]{img/screensharing.png}
 	\caption[Screen Sharing]{Shared content is marked with colored frames on the public display as well as the private devices.}
-	\label{data_share_sequence}
+	\label{screen_sharing}
 \end{figure}
 
 \subsection{Calendar Sharing}
